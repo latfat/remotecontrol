@@ -1,8 +1,5 @@
 package top.latfat.mailcontrol.controller;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
@@ -73,12 +70,7 @@ public class CommandController {
 		logger.debug("前端获取本地命令行执行进程");
 		session.setAttribute("cmd", cmdService.getExecute());
 		PrintWriter writer = response.getWriter();
-		File file = new File("src/main/webapp/cmdpage.html");
-		BufferedReader br = new BufferedReader(new FileReader(file));
-		String tmp = null;
-		while ((tmp = br.readLine()) != null) {
-			writer.println(tmp);
-		}
+		service.writeCMDHeadFile(writer);
 		cmdService.cmd(writer, null);
 	}
 	
