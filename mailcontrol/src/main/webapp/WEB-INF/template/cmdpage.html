@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello World!</title>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			var fresh = setInterval(scrollUp,10);
+			$("input").val("").focus();
+			function cmmt() {
+				var cmd = $("input").val();
+				if(cmd == "")return;
+				$.ajax({
+					url:"command",
+					type:"post",
+					data:{command:cmd},
+					dataType:"json",
+					success:function(result){
+						if(result.status == 1){
+							$("input").val("").focus();
+						}else{
+							clearInterval(fresh);
+						}
+					}
+				});
+			}
+			function scrollUp() {
+				for (I=0; I<5000; I++){ //定义变量I表示纵坐标的值
+					scroll(1,I) //调用函数parent.scroll(x,y)来滚动浏览器窗口，I从大变小，所以是向上滚屏-->
+				}
+				$("p").addClass("pc").removeClass("pp");
+				
+				$("p:last").addClass("pp");
+			}
+		</script>
+		<style type="text/css">
+			.pc{
+				margin: 10px 0 0 0 ;
+				line-height:1em;
+				font-size: 16px;
+			}
+			.pp{
+				margin: 10px 0 25px 0 ;
+				line-height:1em;
+				font-size: 16px;
+			}
+			pre{
+				line-height: 1em;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="javascript:cmmt();" method="post">
+			<input style="width: 100%;position:fixed; bottom:0;">
+		</form>
+		<pre>
+		  _ooOoo_ 
+ 		 o8888888o 
+ 	  	 88" . "88 
+                 (| -_- |) 
+                  O\ = /O 
+              ____/`---*\____ 
+               . * \\| | `. 
+             / \\||| : ||| \ 
+           / _||||| -:- |||||- \ 
+             | | \\\ - / | | 
+            | \_| **\---/** | | 
+           \  .-\__ `-` ___/-. / 
+            ___`. .* /--.--\ `. . __ 
+        ."" *< `.___\_<|>_/___.* >*"". 
+      | | : `- \`.;`\ _ /`;.`/ - ` : | | 
+         \ \ `-. \_ __\ /__ _/ .-` / / 
+====`-.____`-.___\_____/___.-`____.-*======</pre>
