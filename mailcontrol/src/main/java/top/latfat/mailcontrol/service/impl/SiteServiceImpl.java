@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import top.latfat.mailcontrol.cmdexec.NativeCommandExecute;
-import top.latfat.mailcontrol.entity.Result;
+import top.latfat.mailcontrol.domain.Result;
 import top.latfat.mailcontrol.service.SiteService;
 
 @Service

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import top.latfat.mailcontrol.entity.Result;
+import top.latfat.mailcontrol.domain.Result;
 import top.latfat.mailcontrol.service.NativCommandService;
 import top.latfat.mailcontrol.service.SiteService;
 
@@ -47,7 +47,7 @@ import top.latfat.mailcontrol.service.SiteService;
 @Controller
 public class CommandController {
 	
-	private Logger logger = LoggerFactory.getLogger(CommandController.class);
+	private static final Logger logger = LoggerFactory.getLogger(CommandController.class);
 	
 	/**
 	 * 打开CMD命令服务进程

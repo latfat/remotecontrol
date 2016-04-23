@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpSession;
 
-import top.latfat.mailcontrol.entity.Result;
+import top.latfat.mailcontrol.domain.Result;
 
 /**
  * 分装网站服务

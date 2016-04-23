@@ -5,7 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import top.latfat.mailcontrol.entity.Result;
+import top.latfat.mailcontrol.domain.Result;
 import top.latfat.mailcontrol.service.SiteService;
 
 /**

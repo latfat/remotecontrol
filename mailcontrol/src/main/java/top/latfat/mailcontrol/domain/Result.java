@@ -1,4 +1,4 @@
-package top.latfat.mailcontrol.entity;
+package top.latfat.mailcontrol.domain;
 
 import java.io.Serializable;
 

@@ -4,7 +4,7 @@ import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import top.latfat.mailcontrol.entity.Result;
+import top.latfat.mailcontrol.domain.Result;
 
 /**
  * 404处理

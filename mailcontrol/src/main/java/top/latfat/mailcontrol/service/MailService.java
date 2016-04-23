@@ -1,5 +1,9 @@
 package top.latfat.mailcontrol.service;
 
+import java.io.IOException;
+
+import javax.mail.MessagingException;
+
 /**
  * 邮件服务
 // 				    _ooOoo_ 
@@ -30,7 +34,18 @@ public interface MailService {
 
 	/**
 	 * 定时获取邮件命令
+	 * @throws IOException 
+	 * @throws MessagingException 
 	 */
-	void timerLoadMail();
+	void timerLoadMail() throws MessagingException, IOException;
+
+	/**
+	 * 发送邮件
+	 * @param to
+	 * @param text
+	 * @param subject
+	 * @throws MessagingException
+	 */
+	void sendMail(String to, String text, String subject) throws MessagingException;
 
 }

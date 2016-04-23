@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
-import top.latfat.mailcontrol.entity.Result;
+import top.latfat.mailcontrol.domain.Result;
 import top.latfat.mailcontrol.service.SiteBaseService;
 import top.latfat.mailcontrol.util.JSON;
 

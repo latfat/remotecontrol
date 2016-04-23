@@ -1,6 +1,6 @@
 package top.latfat.mailcontrol.service;
 
-import top.latfat.mailcontrol.entity.Result;
+import top.latfat.mailcontrol.domain.Result;
 
 /**
  * 网页相关服务

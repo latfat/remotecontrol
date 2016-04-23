@@ -43,7 +43,7 @@ import top.latfat.mailcontrol.cmdexec.NativeCommandExecute;
 @Component
 public class OsCommandExecute implements NativeCommandExecute {
 
-	private Logger logger = LoggerFactory.getLogger(OsCommandExecute.class);
+	private static final Logger logger = LoggerFactory.getLogger(OsCommandExecute.class);
 
 	/**
 	 * 命令行
